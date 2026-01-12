@@ -1,6 +1,9 @@
 .center {
     text-align: center;
 }
+body {
+    background-color: rgb(241, 241, 241);
+}
 h1 {
     font-size: 3rem;
     color: rgb(116, 50, 110);
@@ -10,15 +13,17 @@ p {
     color: rgb(53, 52, 52);
 }
 textarea {
-    height: 240px;  
+    height: 420px;  
     border: solid 2px rgb(116, 50, 110);
     padding: 15px;
+    background-color: rgb(245, 224, 243);
+    font-size: 1.5rem;
 }
 .marg_bot {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .marg_top {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 button {
     background-color: rgb(116, 50, 110);
