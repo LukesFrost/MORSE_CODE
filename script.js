@@ -56,7 +56,7 @@ function morseToText(vstup) {
     }
     return vystup;
 }
-// Test cases
+/*// Test cases
 console.log(textToMorse("HELLO WORLD"));
 console.log(textToMorse("MMM FEMBOYS"));
 console.log(textToMorse("Pourin bubbly, drank that muddy"));
@@ -64,4 +64,17 @@ console.log(textToMorse("Future"));
 console.log(morseToText(".... . .-.. .-.. --- / .-- --- .-. .-.. -.."));
 console.log(morseToText("-- -- -- / ..-. . -- -... --- -.-- ..."));
 console.log(morseToText(".--. --- ..- .-. .. -. / -... ..- -... -... .-.. -.-- --..-- / -.. .-. .- -. -.- / - .... .- - / -- ..- -.. -.. -.--"));
-console.log(morseToText("..-. ..- - ..- .-. ."));
+console.log(morseToText("..-. ..- - ..- .-. .")); */
+// Propojení s HTML UI
+window.onload = function () {
+    var input = document.getElementById('inputText');
+    var output = document.getElementById('outputText');
+    var toMorseBtn = document.getElementById('ToMorseButton');
+    var fromMorseBtn = document.getElementById('FromMorseButton');
+    toMorseBtn.onclick = function () {
+        output.value = textToMorse(input.value);
+    };
+    fromMorseBtn.onclick = function () {
+        output.value = morseToText(input.value);
+    };
+};

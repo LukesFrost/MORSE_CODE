@@ -58,7 +58,7 @@ function morseToText(vstup: string): string {
     }
     return vystup;
 }
-// Test cases
+/*// Test cases
 console.log(textToMorse("HELLO WORLD"));
 console.log(textToMorse("MMM FEMBOYS"));
 console.log(textToMorse("Pourin bubbly, drank that muddy"));
@@ -66,4 +66,20 @@ console.log(textToMorse("Future"));
 console.log(morseToText(".... . .-.. .-.. --- / .-- --- .-. .-.. -.."));
 console.log(morseToText("-- -- -- / ..-. . -- -... --- -.-- ..."));
 console.log(morseToText(".--. --- ..- .-. .. -. / -... ..- -... -... .-.. -.-- --..-- / -.. .-. .- -. -.- / - .... .- - / -- ..- -.. -.. -.--"));
-console.log(morseToText("..-. ..- - ..- .-. ."));
+console.log(morseToText("..-. ..- - ..- .-. .")); */
+
+// Propojení s HTML UI
+window.onload = () => {
+    const input = document.getElementById('inputText') as HTMLTextAreaElement;
+    const output = document.getElementById('outputText') as HTMLTextAreaElement;
+    const toMorseBtn = document.getElementById('ToMorseButton') as HTMLButtonElement;
+    const fromMorseBtn = document.getElementById('FromMorseButton') as HTMLButtonElement;
+
+    toMorseBtn.onclick = () => {
+        output.value = textToMorse(input.value);
+    };
+
+    fromMorseBtn.onclick = () => {
+        output.value = morseToText(input.value);
+    };
+};
